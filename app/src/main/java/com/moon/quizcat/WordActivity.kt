@@ -77,12 +77,12 @@ class WordActivity : AppCompatActivity() {
     }
 
     private fun initAds() {
-        MobileAds.initialize(this, "ca-app-pub-3578188838033823~7675254312")
+        MobileAds.initialize(this, "ca-app-pub-3578188838033823~2668547634")
         binding.adView.run {
             loadAd(AdRequest.Builder().build())
         }
         frontAd = InterstitialAd(this).apply {
-            adUnitId = "ca-app-pub-3578188838033823/6933018280"
+            adUnitId = "ca-app-pub-3578188838033823/7346159246"
             // TEST
 //            adUnitId = "ca-app-pub-3940256099942544/1033173712"
             loadAd(AdRequest.Builder().build())
