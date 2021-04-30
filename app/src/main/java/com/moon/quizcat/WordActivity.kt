@@ -163,41 +163,6 @@ class WordActivity : AppCompatActivity() {
                 Toast.makeText(this, "아직 광고 준비가 되지 않았습니다. \n로딩이 된 후에 선택 해주세요.", Toast.LENGTH_SHORT)
                     .show()
             }
-
-//            if (rewardedAd.isLoaded) {
-//                val adCallback = object : RewardedAdCallback() {
-//                    override fun onRewardedAdOpened() {
-//                        // Ad opened.
-//                    }
-//
-//                    override fun onRewardedAdClosed() {
-//                        // Ad closed.
-//                        rewardedAd = createAndLoadRewardedAd()
-//                    }
-//
-//                    override fun onUserEarnedReward(@NonNull reward: RewardItem) {
-//                        // User earned reward.
-//                        Log.i("MQ!", "onUserEarnedRewards")
-//                        var gold = pref.getInt("gold", 200)
-//                        gold += 290
-//                        binding.toolbar.findViewById<TextView>(R.id.gold).run {
-//                            text = gold.toString()
-//                        }
-//                        pref.edit().putInt("gold", gold).commit()
-//                        Toast.makeText(this@WordActivity, "290점이 추가 되었습니다.", Toast.LENGTH_SHORT)
-//                            .show()
-//
-//                    }
-//
-//                    override fun onRewardedAdFailedToShow(adError: AdError) {
-//                        // Ad failed to display.
-//                    }
-//                }
-//                rewardedAd.show(this, adCallback)
-//            } else {
-//                Toast.makeText(this, "아직 광고 준비가 되지 않았습니다. \n로딩이 된 후에 선택 해주세요.", Toast.LENGTH_SHORT)
-//                    .show()
-//            }
         }
     }
 
@@ -230,8 +195,10 @@ class WordActivity : AppCompatActivity() {
                     binding.board.visibility = View.INVISIBLE
                     binding.wordResult.visibility = View.VISIBLE
                     binding.result.text = "결과: $stage\n최고: $lastStage"
-//                    binding.continueGame.text = "순위 올리기"
-//                    binding.continueGame.setOnClickListener {
+                    binding.continueGame.text = "홈으로 돌아가기"
+                    binding.continueGame.setOnClickListener {
+                        finish()
+                    }
 //                        MaterialAlertDialogBuilder(this).apply {
 //                            val view = LayoutInflater.from(this@WordActivity)
 //                                .inflate(R.layout.dialog_rank, null, false)
